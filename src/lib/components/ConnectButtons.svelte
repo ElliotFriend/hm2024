@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { contractAddress } from '$lib/stores/contractAddress';
     import { getToastStore } from '@skeletonlabs/skeleton';
     let toastStore = getToastStore();
 
@@ -43,11 +42,8 @@
     }
 </script>
 
-{#if $contractAddress}
-    <button type="button" class="btn variant-filled-secondary" on:click={logout}>Logout</button>
-{:else}
-    <button type="button" class="btn variant-filled-primary" on:click={signup}>Signup</button>
-    <button type="button" class="btn variant-filled-secondary" on:click={() => login()}
-        >Login</button
-    >
-{/if}
+<button type="button" class="btn variant-filled-secondary" on:click={() => login()}
+    >Login</button
+>
+<button type="button" class="btn variant-filled-primary" on:click={signup}>Signup</button>
+<button type="button" class="btn variant-filled-secondary" on:click={logout}>Logout</button>
