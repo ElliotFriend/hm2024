@@ -14,7 +14,7 @@ export const GET: RequestHandler = async ({ params, fetch }) => {
         const { built, ...transfer } = await native.transfer({
             from: fundKeypair.publicKey(),
             to: params.address,
-            amount: BigInt(100 * 10_000_000)
+            amount: BigInt(50 * 10_000_000)
         });
 
         await transfer.signAuthEntries({
