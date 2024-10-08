@@ -3,7 +3,7 @@ target
 .soroban
 
 # the hello-world contract doesn't need to stay
-contracts/hello_world
+/contracts/hello_world
 
 # build output
 /build
@@ -38,4 +38,4 @@ packages/*
 
 # generated contract client imports (you may want to actually KEEP these in your _actual_ project)
 src/lib/contracts/*
-!src/lib/contracts/.gitkeep
+!src/lib/contracts/hello_world.ts
