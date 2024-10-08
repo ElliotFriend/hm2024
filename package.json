@@ -17,7 +17,6 @@
         "test:unit": "vitest"
     },
     "devDependencies": {
-        "@neoconfetti/svelte": "^2.2.1",
         "@playwright/test": "^1.47.2",
         "@skeletonlabs/skeleton": "2.10.2",
         "@skeletonlabs/tw-plugin": "^0.4.0",
@@ -32,7 +31,6 @@
         "@typescript-eslint/eslint-plugin": "^8.8.0",
         "@typescript-eslint/parser": "^8.8.0",
         "autoprefixer": "^10.4.20",
-        "base64url": "^3.0.1",
         "dotenv": "^16.4.5",
         "eslint": "^9.11.1",
         "eslint-config-prettier": "^9.1.0",
