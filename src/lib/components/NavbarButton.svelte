@@ -1,5 +1,5 @@
 <script>
-    export let item
+    export let item;
 </script>
 
 <a href={item.href} class="btn hover:variant-soft-primary">

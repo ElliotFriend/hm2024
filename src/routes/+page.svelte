@@ -1,16 +1,16 @@
 <script lang="ts">
     // This may fail, if you removed or renamed your `hello_world` contract in
     // the `/contracts` directory.
-    import helloWorld from "$lib/contracts/hello_world";
+    import helloWorld from '$lib/contracts/hello_world';
 
     let name: string = '';
-    let greeting: string[] = []
+    let greeting: string[] = [];
 
     async function sayHello(): Promise<void> {
         const { result } = await helloWorld.hello({
             to: name || 'HackMeridian',
-        })
-        greeting = result
+        });
+        greeting = result;
     }
 </script>
 
@@ -34,5 +34,8 @@
     <li>
         <code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
     </li>
-    <li><code class="code">/src/routes/about/+page.svelte</code> - a route for you to play around with and experiment with different SvelteKit routing techniques</li>
+    <li>
+        <code class="code">/src/routes/about/+page.svelte</code> - a route for you to play around with
+        and experiment with different SvelteKit routing techniques
+    </li>
 </ul>

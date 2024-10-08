@@ -1,6 +1,6 @@
 <script lang="ts">
     import ConnectButtons from '$lib/components/ConnectButtons.svelte';
-    import BookA from 'lucide-svelte/icons/book-a'
+    import BookA from 'lucide-svelte/icons/book-a';
     import NavbarButton from './NavbarButton.svelte';
 
     const menuItems = [
@@ -9,7 +9,7 @@
             href: '/about',
             icon: BookA,
         },
-    ]
+    ];
 </script>
 
 <header class="bg-surface-100-800-token shadow-xl p-4 z-5">

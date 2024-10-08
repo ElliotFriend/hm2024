@@ -10,7 +10,7 @@
             console.log('err', err);
             toastStore.trigger({
                 message: 'Something went wrong signing up. Please try again later.',
-                background: 'variant-filled-error'
+                background: 'variant-filled-error',
             });
         }
     }
@@ -23,7 +23,7 @@
             console.log('err', err);
             toastStore.trigger({
                 message: 'Something went wrong logging in. Please try again later.',
-                background: 'variant-filled-error'
+                background: 'variant-filled-error',
             });
         }
     }
@@ -36,14 +36,12 @@
             console.log('err', err);
             toastStore.trigger({
                 message: 'Something went wrong logging out. Please try again later.',
-                background: 'variant-filled-error'
+                background: 'variant-filled-error',
             });
         }
     }
 </script>
 
-<button type="button" class="btn variant-filled-secondary" on:click={() => login()}
-    >Login</button
->
+<button type="button" class="btn variant-filled-secondary" on:click={() => login()}>Login</button>
 <button type="button" class="btn variant-filled-primary" on:click={signup}>Signup</button>
 <button type="button" class="btn variant-filled-secondary" on:click={logout}>Logout</button>

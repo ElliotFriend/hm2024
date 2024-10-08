@@ -1,7 +1,7 @@
 <script lang="ts">
     import '../app.postcss';
     import { initializeStores, Toast } from '@skeletonlabs/skeleton';
-    initializeStores()
+    initializeStores();
 
     import Header from '$lib/components/Header.svelte';
     import Footer from '$lib/components/Footer.svelte';

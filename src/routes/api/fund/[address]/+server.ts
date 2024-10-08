@@ -14,29 +14,29 @@ export const GET: RequestHandler = async ({ params, fetch }) => {
         const { built, ...transfer } = await native.transfer({
             from: fundKeypair.publicKey(),
             to: params.address,
-            amount: BigInt(50 * 10_000_000)
+            amount: BigInt(50 * 10_000_000),
         });
 
         await transfer.signAuthEntries({
             address: fundKeypair.publicKey(),
-            signAuthEntry: fundSigner.signAuthEntry
+            signAuthEntry: fundSigner.signAuthEntry,
         });
 
         await fetch('/api/send', {
             method: 'POST',
             body: JSON.stringify({
-                xdr: built!.toXDR()
-            })
+                xdr: built!.toXDR(),
+            }),
         });
 
         return json({
             status: 200,
-            message: 'Smart wallet successfully funded'
+            message: 'Smart wallet successfully funded',
         });
     } catch (err) {
         console.error(err);
         error(500, {
-            message: 'Error when funding smart wallet'
+            message: 'Error when funding smart wallet',
         });
     }
 };
