@@ -19,9 +19,6 @@ console.log('###################### Initializing ########################');
 const __filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(__filename);
 
-// variable for later setting pinned version of soroban in "$(dirname/target/bin/soroban)"
-const cli = 'stellar';
-
 // Function to execute and log shell commands
 function exe(command) {
     console.log(command);
@@ -29,7 +26,7 @@ function exe(command) {
 }
 
 function fundAll() {
-    exe(`${cli} keys generate ${process.env.STELLAR_ACCOUNT}`);
+    exe(`stellar keys generate ${process.env.STELLAR_ACCOUNT}`);
 }
 
 function removeFiles(pattern) {
@@ -40,7 +37,7 @@ function removeFiles(pattern) {
 function buildAll() {
     removeFiles(`${dirname}/target/wasm32-unknown-unknown/release/*.wasm`);
     removeFiles(`${dirname}/target/wasm32-unknown-unknown/release/*.d`);
-    exe(`${cli} contract build`);
+    exe(`stellar contract build`);
 }
 
 function filenameNoExtension(filename) {
@@ -49,7 +46,7 @@ function filenameNoExtension(filename) {
 
 function deploy(wasm) {
     exe(
-        `${cli} contract deploy --wasm ${wasm} --ignore-checks --alias ${filenameNoExtension(wasm)}`,
+        `stellar contract deploy --wasm ${wasm} --ignore-checks --alias ${filenameNoExtension(wasm)}`,
     );
 }
 
@@ -79,7 +76,7 @@ function contracts() {
 
 function bind({ alias, id }) {
     exe(
-        `${cli} contract bindings typescript --contract-id ${id} --output-dir ${dirname}/packages/${alias} --overwrite`,
+        `stellar contract bindings typescript --contract-id ${id} --output-dir ${dirname}/packages/${alias} --overwrite`,
     );
 }
 
