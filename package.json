@@ -1,18 +1,19 @@
 {
     "name": "sveltekit-passkeys",
-    "description": "A Stellar smart contract template combining SvelteKit, Skeleton, and PasskeyKit",
     "version": "0.0.1",
     "private": true,
+    "description": "A Stellar smart contract template combining SvelteKit, Skeleton, and PasskeyKit",
+    "type": "module",
     "scripts": {
-        "setup": "node initialize.js",
-        "dev": "vite dev",
         "build": "vite build",
-        "preview": "vite preview",
-        "test": "pnpm run test:integration && pnpm run test:unit",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-        "lint": "prettier --check . && eslint .",
+        "dev": "vite dev",
         "format": "prettier --write .",
+        "lint": "prettier --check . && eslint .",
+        "preview": "vite preview",
+        "setup": "node initialize.js",
+        "test": "pnpm run test:integration && pnpm run test:unit",
         "test:integration": "playwright test",
         "test:unit": "vitest"
     },
@@ -40,6 +41,7 @@
         "passkey-kit": "^0.9.4",
         "postcss": "^8.4.47",
         "prettier": "^3.3.3",
+        "prettier-plugin-packagejson": "^2.5.3",
         "prettier-plugin-svelte": "^3.2.7",
         "svelte": "^4.2.19",
         "svelte-check": "^4.0.4",
@@ -51,7 +53,6 @@
         "vite-plugin-tailwind-purgecss": "^0.3.3",
         "vitest": "^2.1.2"
     },
-    "type": "module",
     "pnpm": {
         "overrides": {
             "@stellar/stellar-sdk": "$@stellar/stellar-sdk"
