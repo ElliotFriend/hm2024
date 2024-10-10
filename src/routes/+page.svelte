@@ -39,3 +39,9 @@
         and experiment with different SvelteKit routing techniques
     </li>
 </ul>
+
+<style lang="postcss">
+    button {
+        @apply btn variant-filled-primary;
+    }
+</style>
