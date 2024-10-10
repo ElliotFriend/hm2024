@@ -92,8 +92,7 @@ function importContract({ alias }) {
     const importContent =
         `import * as Client from '${alias}';\n` +
         `import {\n` +
-        `    PUBLIC_STELLAR_RPC_URL,\n` +
-        `    PUBLIC_STELLAR_NETWORK_PASSPHRASE,\n` +
+        `    PUBLIC_STELLAR_RPC_URL, PUBLIC_STELLAR_NETWORK_PASSPHRASE,\n` +
         `} from '$env/static/public';\n\n` +
         `export default new Client.Client({\n` +
         `    contractId: Client.networks.${process.env.STELLAR_NETWORK}.contractId,\n` +
